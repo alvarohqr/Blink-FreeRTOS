@@ -1,0 +1,30 @@
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+<script type= text/javascript">
+    const options = {
+      
+      connectTimeout: 4000, // Timeout period
+      // Authentication information
+      clientId: 'emqx',
+      //username: 'emqx_test',
+      //password: 'emqx_test',
+      keepalive: 60,
+      clean: true, // retain session
+  }
+  
+  const connectUrl = 'ws://192.168.10.101:8083/mqtt'
+  const client = mqtt.connect(connectUrl, options)
+  
+  client.on('reconnect', (error) => {
+    console.log('reconnecting:', error)
+  })
+  
+  client.on('error', (error) => {
+    console.log('Connection failed:', error)
+  })
+  
+  client.on('message', (topic, message) => {
+  console.log('receive message：', topic, message.toString())
+  })
+    
+  </script>

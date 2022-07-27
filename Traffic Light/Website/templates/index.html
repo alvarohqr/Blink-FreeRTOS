@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Proyecto IOT</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type= "text/css "href="{{ url_for('static', filename='style.css')}}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.6/mqtt.js"></script>
+  <script src="{{url_for('static', filename='ws.js')}}"></script>
+  <script src="{{url_for('static', filename='sketch.js')}}"></script>
+
+ 
+
+</head>
+
+<body>
+
+
+<h1>Proyecto Semaforo IOT</h2>
+<p>Francisco Antonio Palos Angulo
+  <br>
+  Carlos Ramon Galindo
+  <br>
+  Alvaro Quinones
+</p>
+
+<div class="swtich-container">
+  <input id="input_led1" onchange="process_led1()" type="checkbox" > PRENDER LED
+</div>
+
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Semaforo 1</h2>
+    <button onclick="myFunction()">Click me</button>
+    <p id="demo"></p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Semaforo 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
+</body>
+</html>
+
