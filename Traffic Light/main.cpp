@@ -5,8 +5,8 @@
 
 
 //CONFIGURAMOS ACCESO A WIFI//
-const char* ssid     = "FAMILIA_PALOS-ext";
-const char* password = "palospalos1";
+const char* ssid     = "SSID";
+const char* password = "1234";
 
 const char *mqtt_server = "test.mosquitto.org";
 const int mqtt_port = 1883;
